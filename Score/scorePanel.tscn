@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcgxxa7wev0aj"]
+
+[ext_resource type="Script" uid="uid://c0rpxlucrkl5s" path="res://Score/scoreLabel.gd" id="1_rfthd"]
+
+[node name="ScorePanel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_horizontal_guides_ = [149.0]
+metadata/_edit_vertical_guides_ = [378.0]
+
+[node name="scoreRight" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1356.0
+offset_top = 120.0
+offset_right = 1506.0
+offset_bottom = 210.0
+script = ExtResource("1_rfthd")
+scoreType = 2
+
+[node name="scoreLeft" type="Label" parent="."]
+layout_mode = 0
+offset_left = 383.0
+offset_top = 120.0
+offset_right = 533.0
+offset_bottom = 210.0
+script = ExtResource("1_rfthd")
+scoreType = 1

@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=3 uid="uid://ckajtl6i0b8jf"]
+
+[ext_resource type="Script" uid="uid://c1mebr8mqsmeh" path="res://background/Boundary.gd" id="1_eva80"]
+[ext_resource type="PackedScene" uid="uid://by1amxyetspjs" path="res://rocket_scene/area_2d.tscn" id="2_r0sni"]
+[ext_resource type="PackedScene" uid="uid://dcgxxa7wev0aj" path="res://Score/scorePanel.tscn" id="3_r0sni"]
+[ext_resource type="PackedScene" uid="uid://bjkygya2garu0" path="res://players/player_scene.tscn" id="4_qjy44"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qjy44"]
+size = Vector2(5.75, 1091)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eva80"]
+size = Vector2(1940, 7)
+
+[node name="Node" type="Node"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.0177324, 0.0177324, 0.0177324, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 953.0
+offset_right = 967.0
+offset_bottom = 1080.0
+
+[node name="boundaryLeft" type="Area2D" parent="."]
+script = ExtResource("1_eva80")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="boundaryLeft"]
+position = Vector2(-1.875, 540)
+shape = SubResource("RectangleShape2D_qjy44")
+
+[node name="boundaryRight" type="Area2D" parent="."]
+script = ExtResource("1_eva80")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="boundaryRight"]
+position = Vector2(1920, 555)
+shape = SubResource("RectangleShape2D_qjy44")
+
+[node name="Ball" parent="." instance=ExtResource("2_r0sni")]
+position = Vector2(961, 545)
+scale = Vector2(1.5, 1.5)
+
+[node name="boundaryTop" type="Area2D" parent="."]
+script = ExtResource("1_eva80")
+direction = "Top"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="boundaryTop"]
+position = Vector2(959, -2)
+shape = SubResource("RectangleShape2D_eva80")
+
+[node name="boundaryBottom" type="Area2D" parent="."]
+script = ExtResource("1_eva80")
+direction = "Bottom"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="boundaryBottom"]
+position = Vector2(959, 1078)
+shape = SubResource("RectangleShape2D_eva80")
+
+[node name="ScorePanel" parent="." instance=ExtResource("3_r0sni")]
+
+[node name="PlayerScene" parent="." instance=ExtResource("4_qjy44")]

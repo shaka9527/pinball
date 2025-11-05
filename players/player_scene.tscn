@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjkygya2garu0"]
+
+[ext_resource type="Script" uid="uid://b1y0760l12xtx" path="res://players/player.gd" id="1_yg0c1"]
+[ext_resource type="AudioStream" uid="uid://bwlkisju5sohs" path="res://sound/Wooden Bat Hits Baseball Run.mp3" id="2_b3dxo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b3dxo"]
+size = Vector2(20, 200)
+
+[node name="PlayerScene" type="Node2D"]
+
+[node name="player1" type="Area2D" parent="."]
+script = ExtResource("1_yg0c1")
+playerName = "player1"
+direction = "Left"
+
+[node name="ColorRect" type="ColorRect" parent="player1"]
+offset_right = 20.0
+offset_bottom = 200.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player1"]
+position = Vector2(10, 100)
+shape = SubResource("RectangleShape2D_b3dxo")
+
+[node name="player2" type="Area2D" parent="."]
+position = Vector2(1899, 2)
+script = ExtResource("1_yg0c1")
+playerName = "player2"
+direction = "Right"
+
+[node name="ColorRect" type="ColorRect" parent="player2"]
+offset_right = 20.0
+offset_bottom = 200.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player2"]
+position = Vector2(10, 100)
+shape = SubResource("RectangleShape2D_b3dxo")
+
+[node name="hitSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_b3dxo")
