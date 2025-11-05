@@ -2,7 +2,7 @@ extends Area2D
 
 var defaultPosition:Vector2 = Vector2(0, 0)
 
-var positionMoveValue = Vector2(10, 10)
+var positionMoveValue = Vector2.ZERO
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
