@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://ckajtl6i0b8jf"]
+[gd_scene load_steps=8 format=3 uid="uid://ckajtl6i0b8jf"]
 
 [ext_resource type="Script" uid="uid://c1mebr8mqsmeh" path="res://background/Boundary.gd" id="1_eva80"]
 [ext_resource type="PackedScene" uid="uid://by1amxyetspjs" path="res://rocket_scene/area_2d.tscn" id="2_r0sni"]
 [ext_resource type="PackedScene" uid="uid://dcgxxa7wev0aj" path="res://Score/scorePanel.tscn" id="3_r0sni"]
 [ext_resource type="PackedScene" uid="uid://bjkygya2garu0" path="res://players/player_scene.tscn" id="4_qjy44"]
+[ext_resource type="Script" uid="uid://bsvsvbgn373he" path="res://background/BackgroundManager.gd" id="5_h86k2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qjy44"]
 size = Vector2(5.75, 1091)
@@ -61,3 +62,6 @@ shape = SubResource("RectangleShape2D_eva80")
 [node name="ScorePanel" parent="." instance=ExtResource("3_r0sni")]
 
 [node name="PlayerScene" parent="." instance=ExtResource("4_qjy44")]
+
+[node name="BackgroundManager" type="Node" parent="."]
+script = ExtResource("5_h86k2")
