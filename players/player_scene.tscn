@@ -11,6 +11,7 @@ size = Vector2(20, 200)
 [node name="player1" type="Area2D" parent="."]
 script = ExtResource("1_yg0c1")
 playerName = "player1"
+playerType = 1
 direction = "Left"
 
 [node name="ColorRect" type="ColorRect" parent="player1"]
@@ -25,6 +26,7 @@ shape = SubResource("RectangleShape2D_b3dxo")
 position = Vector2(1899, 2)
 script = ExtResource("1_yg0c1")
 playerName = "player2"
+playerType = 2
 direction = "Right"
 
 [node name="ColorRect" type="ColorRect" parent="player2"]
