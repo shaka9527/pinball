@@ -3,10 +3,14 @@ extends Node
 class Score : 
 	var scoreType:int
 	var scoreValue:int
+	var consecutiveWins: int = 0
+	var scoreMultiplier: int = 1
 	
 	func _init(scoreType:int, scoreValue:int) -> void:
 		self.scoreType = scoreType
 		self.scoreValue = scoreValue
+		self.consecutiveWins = 0
+		self.scoreMultiplier = 1
  
 enum SCORE_TYPE {LEFT = 1, RIGHT = 2}
 enum SCORE_LEVE {LEVEL1 = 1, LEVEL2 = 2}

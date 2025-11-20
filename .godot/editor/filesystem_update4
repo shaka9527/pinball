@@ -1,4 +1,6 @@
-res://background/background.tscn
 res://rocket_scene/area_2d.tscn
+res://background/background.tscn
 res://Score/scorePanel.tscn
 res://players/player_scene.tscn
+res://players/player.gd
+res://rocket_scene/Rocket.gd
